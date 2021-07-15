@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海贼王</title>
+    <style type="text/css">
+    body 
+{
+    background-image: url("素材/lt2.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+    fieldset
+    {
+        margin: 0 auto;
+        float: none;
+    }
+    </style>
+    <script type = "text/javascript">
+        alert('您还未注册！');
+    </script>
+    <script type="text/javascript">
+        function beforeSubmit(form){
+        if(form.username.value==''){
+        alert('用户名不能为空！');
+        form.username.focus();
+        return false;
+        }
+        if(form.password.value==''){
+        alert('密码不能为空！');
+        form.password.focus();
+        return false;
+        }
+        if(form.password.value.length<6){
+        alert('密码至少为6位，请重新输入！');
+        form.password.focus();
+        return false;
+        }
+        if(form.password.value!=form.password2.value) {
+        alert('你两次输入的密码不一致，请重新输入！');
+        form.password2.focus();
+        return false;
+        }
+        return true;
+        }
+    </script>
+</head>
+
+<body>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <fieldset style="width: 600px;">
+        <legend >用户注册</legend>
+        <form method="post" name="form" action = "https://tieba.baidu.com/f?ie=utf-8&kw=%E6%B5%B7%E8%B4%BC%E7%8E%8B" onSubmit="return beforeSubmit(this);">
+        <table border="1" width="30%" cellspacing="0" cellpadding="0" align="center">
+        <tr><td><label>用户名：<input type="text" name="username" value=""></label></td></tr>
+        <tr><td><label>密 码：<input type="password" name="password" value=""></label></td></tr>
+        <tr><td><label>重复密码：<input type="password" name="password2" value=""></label></td></tr>
+        <tr><td><input value="注册" type="submit"<a href="https://tieba.baidu.com/f?ie=utf-8&kw=%E6%B5%B7%E8%B4%BC%E7%8E%8B" target="_blank"> <input type="reset" value="重置"> <a href="网站首页.html">返回主页</a></input></td></tr>
+        </table>
+        </form>
+    </fieldset>
+  
+</body>
+</html>
